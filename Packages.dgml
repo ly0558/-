@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="SuperServer" Label="SuperServer" Category="项目" />
+    <Node Id="Dos.ORM 1.17.0" Label="Dos.ORM 1.17.0" Category="包" />
+    <Node Id="Dos.ORM.MySql 2.1.0" Label="Dos.ORM.MySql 2.1.0" Category="包" />
+    <Node Id="HZH_Controls 1.0.11" Label="HZH_Controls 1.0.11" Category="包" />
+    <Node Id="jQuery 1.12.4" Label="jQuery 1.12.4" Category="包" />
+    <Node Id="jQuery.UI.Combined 1.12.1" Label="jQuery.UI.Combined 1.12.1" Category="包" />
+    <Node Id="log4net 2.0.8" Label="log4net 2.0.8" Category="包" />
+    <Node Id="MaterialSkin 0.2.1" Label="MaterialSkin 0.2.1" Category="包" />
+    <Node Id="MetroModernUI 1.4.0.0" Label="MetroModernUI 1.4.0.0" Category="包" />
+    <Node Id="MySql.Data 6.9.12" Label="MySql.Data 6.9.12" Category="包" />
+    <Node Id="Newtonsoft.Json 13.0.1" Label="Newtonsoft.Json 13.0.1" Category="包" />
+    <Node Id="SuperSocket 1.6.6.1" Label="SuperSocket 1.6.6.1" Category="包" />
+    <Node Id="SuperSocket.Engine 1.6.6.1" Label="SuperSocket.Engine 1.6.6.1" Category="包" />
+    <Node Id="SuperWebSocket 0.9.0.2" Label="SuperWebSocket 0.9.0.2" Category="包" />
+  </Nodes>
+  <Links>
+    <Link Source="Dos.ORM.MySql 2.1.0" Target="Dos.ORM 1.17.0" Category="程序包依赖项" />
+    <Link Source="Dos.ORM.MySql 2.1.0" Target="MySql.Data 6.9.12" Category="程序包依赖项" />
+    <Link Source="Dos.ORM.MySql 2.1.0" Target="Dos.ORM 1.17.0" Category="程序包依赖项" />
+    <Link Source="Dos.ORM.MySql 2.1.0" Target="MySql.Data 6.9.12" Category="程序包依赖项" />
+    <Link Source="jQuery.UI.Combined 1.12.1" Target="jQuery 1.12.4" Category="程序包依赖项" />
+    <Link Source="SuperSocket 1.6.6.1" Target="log4net 2.0.8" Category="程序包依赖项" />
+    <Link Source="SuperSocket.Engine 1.6.6.1" Target="log4net 2.0.8" Category="程序包依赖项" />
+    <Link Source="SuperSocket.Engine 1.6.6.1" Target="SuperSocket 1.6.6.1" Category="程序包依赖项" />
+    <Link Source="SuperWebSocket 0.9.0.2" Target="log4net 2.0.8" Category="程序包依赖项" />
+    <Link Source="SuperWebSocket 0.9.0.2" Target="Newtonsoft.Json 13.0.1" Category="程序包依赖项" />
+    <Link Source="SuperServer" Target="Dos.ORM.MySql 2.1.0" Category="安装的程序包" />
+    <Link Source="SuperServer" Target="HZH_Controls 1.0.11" Category="安装的程序包" />
+    <Link Source="SuperServer" Target="jQuery.UI.Combined 1.12.1" Category="安装的程序包" />
+    <Link Source="SuperServer" Target="MaterialSkin 0.2.1" Category="安装的程序包" />
+    <Link Source="SuperServer" Target="MetroModernUI 1.4.0.0" Category="安装的程序包" />
+    <Link Source="SuperServer" Target="SuperSocket.Engine 1.6.6.1" Category="安装的程序包" />
+    <Link Source="SuperServer" Target="SuperWebSocket 0.9.0.2" Category="安装的程序包" />
+  </Links>
+  <Categories>
+    <Category Id="项目" />
+    <Category Id="包" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="项目" ValueLabel="True">
+      <Condition Expression="HasCategory('项目')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="程序包依赖项" ValueLabel="True">
+      <Condition Expression="HasCategory('程序包依赖项')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>
